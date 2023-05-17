@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "teste-logspace"
+version = "0.1.0"
+description = ""
+authors = ["Arthur-Alves-BR <arthuralves2p@gmail.com>"]
+readme = "README.md"
+packages = [{include = "teste_logspace"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.95.2"
+uvicorn = "^0.22.0"
+langchain = "^0.0.172"
+openai = "^0.27.6"
+python-dotenv = "^1.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
