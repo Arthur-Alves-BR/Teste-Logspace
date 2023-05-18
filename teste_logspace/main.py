@@ -1,24 +1,17 @@
-import os
-from dotenv import load_dotenv
+import dotenv
 
-from fastapi import FastAPI, Depends
-from fastapi import HTTPException
+from fastapi import FastAPI
+from langchain.llms import OpenAI
 
-from teste_logspace.models import SearchRequest, SearchResponse
+from .models import SearchRequest, SearchResponse
 
 
-load_dotenv()
-print(os.getenv('OPENAI_API_KEY'))
+dotenv.load_dotenv()
+
+llm = OpenAI()
 app = FastAPI()
 
 
-@app.post("/search")
-async def search(query: SearchRequest) -> SearchResponse:
-    # summary = await process_with_langchain(query.query)
-    
-    print(query)
-    # print(os.getenv('OPENAI_API_KEY'))
-    # if not summary:
-    #     raise HTTPException(status_code=404, detail="No results found.")
-    
-    return {"summary": 'summary'}
+@app.post('/search')
+def search(data: SearchRequest) -> SearchResponse:
+    return {'summary': llm(data.query)}

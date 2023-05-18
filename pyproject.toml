@@ -7,7 +7,7 @@ readme = "README.md"
 packages = [{include = "teste_logspace"}]
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.9"
 fastapi = "^0.95.2"
 uvicorn = "^0.22.0"
 langchain = "^0.0.172"

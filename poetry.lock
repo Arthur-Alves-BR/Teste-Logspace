@@ -538,6 +538,7 @@ files = [
 
 [package.dependencies]
 aiohttp = ">=3.8.3,<4.0.0"
+async-timeout = {version = ">=4.0.0,<5.0.0", markers = "python_version < \"3.11\""}
 dataclasses-json = ">=0.5.7,<0.6.0"
 numexpr = ">=2.8.4,<3.0.0"
 numpy = ">=1,<2"
@@ -1067,6 +1068,7 @@ files = [
 
 [package.dependencies]
 anyio = ">=3.4.0,<5"
+typing-extensions = {version = ">=3.10.0", markers = "python_version < \"3.10\""}
 
 [package.extras]
 full = ["httpx (>=0.22.0)", "itsdangerous", "jinja2", "python-multipart", "pyyaml"]
@@ -1262,5 +1264,5 @@ multidict = ">=4.0"
 
 [metadata]
 lock-version = "2.0"
-python-versions = "^3.11"
-content-hash = "f61d43c961f0a2d3756c47782bbadc86ffd21c1f43697edc10f46496bd8ebfc0"
+python-versions = "^3.9"
+content-hash = "c424c68c50970a76fab109a0f59e96c4fb6fc52542bb3e32360a7b0ab8d05bfe"
